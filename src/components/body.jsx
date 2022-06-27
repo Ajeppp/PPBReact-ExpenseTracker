@@ -4,27 +4,28 @@ import { Box, Button, FormControl, NumberInput, NumberInputField, FormHelperText
 
 export default function Body(props) {
     const [saldo, setSaldo] = useState(0);
+    const [input, setInput] = useState(0);
     const [data, setData] = useState({
         Expense: [],
         Income: [],
     });
 
-    const isError = props.input === '' || props.input === (0);
+    const isError = input === '' || input === (0);
 
     function updateInput(e) {
         const inputTemp = e.target.value;
-        props.setInput(inputTemp);
+        setInput(inputTemp);
     }
 
     function handleSubmit() {
         // e.preventDefault();
-        setSaldo((prevVal) => prevVal + parseInt(props.input));
+        setSaldo((prevVal) => prevVal + parseInt(input));
         console.log("masuk");
     }
 
     function check(e) {
         e.preventDefault();
-        if (!parseInt(props.input)) {
+        if (!parseInt(input)) {
             console.log("kosong");
         } else {
             handleSubmit();

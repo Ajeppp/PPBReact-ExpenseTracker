@@ -18,7 +18,6 @@ function DataIncome() {
 }
 
 export default function History() {
-
     return (
         <Flex className="HistoryPart" my='10px' gap='20px'>
             <Box className="ExpensePart" bg='#962109' width='300px' height='300px'>
