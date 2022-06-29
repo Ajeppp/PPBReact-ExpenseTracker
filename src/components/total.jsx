@@ -4,7 +4,7 @@ import { MdHistory } from "react-icons/md";
 
 export default function Total(props) {
     return (
-        <Flex className="BungkusTotal" gap='20px'>
+        <Flex className="BungkusTotal" gap='20px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}>
             <Flex className="BungkusTotalExpense" border='4px' borderColor='#3F4E4F' width='200px' height='80px' gap='20px'>
                 <Box display='flex' flexDir="column" justifyContent='center' mx='20px'>
                     <Text textAlign='left' fontSize='large'>Expense</Text>

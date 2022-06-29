@@ -53,10 +53,10 @@ export default function Body() {
     }
 
     return (
-        <Flex className="Bungkus" flexDir='column' justifyContent='center' alignItems='center'>
+        <Flex className="Bungkus" height={{ base: '400px', md: '350px', lg: '300px' }} width={{ base: '300px', md: '450px', lg: '500px' }} flexDir='column' justifyContent='center' alignItems='center'>
             <Box className="Body">
                 <Box className='Saldo' color='#FFFFFF'>
-                    <Heading fontWeight='normal' fontSize='lg'>My Balance: <Flex color='#FFFFFF' fontWeight='bold' display='inline-flex'>${saldo}</Flex> </Heading>
+                    <Heading fontWeight='normal' fontSize={{ base: 'lg', lg: 'xl' }}>My Balance: <Flex color='#FFFFFF' fontWeight='bold' display='inline-flex'>${saldo}</Flex> </Heading>
                 </Box>
                 <Box className='InputUser' as='form' width='200px' onSubmit={check}>
                     <FormControl isInvalid={isError} my='10px'>
@@ -75,6 +75,6 @@ export default function Body() {
                 </Box>
             </Box>
             <Total total={total} data={data} />
-        </Flex>
+        </Flex >
     )
 }

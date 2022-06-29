@@ -6,7 +6,7 @@ export default function Header() {
         <Text
             bgGradient='linear(to-l, #7928CA, #FF0080)'
             bgClip='text'
-            fontSize='6xl'
+            fontSize={{ base: '5xl', md: '6xl', lg: '7xl' }}
             fontWeight='bold'
         >
             TracPense
