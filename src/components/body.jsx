@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { Box, Button, FormControl, NumberInput, NumberInputField, FormHelperText, FormErrorMessage, Heading, Flex } from "@chakra-ui/react";
+import { Box, Button, InputLeftAddon, InputGroup, FormControl, NumberInput, NumberInputField, FormHelperText, FormErrorMessage, Heading, Flex, Input } from "@chakra-ui/react";
 import History from "./history";
 
 export default function Body() {
@@ -50,16 +50,17 @@ export default function Body() {
                 </Box>
                 <Box className='InputUser' as='form' width='200px' onSubmit={check}>
                     <FormControl isInvalid={isError} my='10px'>
-                        <NumberInput max={100000000} min={-100000000}>
-                            <NumberInputField onChange={updateInput} borderColor='#393E46' bg='#00ADB5' color='#0A0908' _hover={{ color: '#0A0908', bg: '#00ADB5' }} />
-                        </NumberInput>
+                        <InputGroup>
+                            <InputLeftAddon color='#FFFFFF' bg='#3F4E4F' borderColor='#3F4E4F' children='Rp' />
+                            <Input type='number' onChange={updateInput} border='2px' borderColor='#3F4E4F' bg='#1f2124' color='#FFFFFF' _hover={{ color: '#FFFFFF', bg: '#1f2124' }} />
+                        </InputGroup>
                         {!isError ? (
                             <FormHelperText>
                             </FormHelperText>
                         ) : (
                             <FormErrorMessage>Input Can't Be Empty.</FormErrorMessage>
                         )}
-                        <Button my='7px' type="submit" color='#0A0908' bg='#00ADB5' _hover={{ color: '#0A0908', bg: '#00ADB5' }}> Hitung </Button>
+                        <Button my='7px' type="submit" color='#FFFFFF' bg='#3F4E4F' _hover={{ color: '#0A0908', bg: '#00ADB5' }}> Hitung </Button>
                     </FormControl>
                 </Box>
             </Box>

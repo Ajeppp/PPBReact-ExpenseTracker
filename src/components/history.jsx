@@ -3,27 +3,29 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 
 function DataExpense() {
     return (
-        <Box bg='#e00b16' mx='15px' my='10px'>
-            <Heading size='md' my='15px' mx='5px' textAlign='left'>Rp5000</Heading>
-        </Box>
+        <Heading size='md' border='4px' borderColor='#1f2124' borderLeftColor='#F15412' my='15px' mx='15px' textAlign='left'>Rp5000</Heading>
     )
 }
 
 function DataIncome() {
     return (
-        <Box bg='#25523e' mx='15px' my='10px'>
-            <Heading size='md' my='15px' mx='5px' textAlign='left'>Rp</Heading>
-        </Box>
+        <Heading size='md' border='4px' borderColor='#1f2124' borderLeftColor='#3EC70B' my='15px' mx='15px' textAlign='left'>Rp</Heading>
     )
 }
 
 export default function History() {
     return (
         <Flex className="HistoryPart" my='10px' gap='20px'>
-            <Box className="ExpensePart" bg='#962109' width='300px' height='300px'>
+            <Box className="ExpensePart" border='4px' borderColor='#3F4E4F' width='300px' height='300px'>
+                <Box className="HeaderExpense" width='296px' bg='#3F4E4F'>
+                    <Heading size='md' mx='10px' textAlign='left'>Expense</Heading>
+                </Box>
                 <DataExpense />
             </Box>
-            <Box className="IncomePart" bg='#346751' width='300px' height='300px'>
+            <Box className="IncomePart" border='4px' borderColor='#3F4E4F' width='300px' height='300px'>
+                <Box className="HeaderExpense" width='296px' bg='#3F4E4F'>
+                    <Heading size='md' mx='10px' textAlign='left'>Income</Heading>
+                </Box>
                 <DataIncome />
             </Box>
         </Flex >
