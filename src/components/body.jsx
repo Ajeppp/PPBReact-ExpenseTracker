@@ -63,7 +63,7 @@ export default function Body() {
                     <FormControl isInvalid={isError} my='10px'>
                         <InputGroup>
                             <InputLeftAddon color='#FFFFFF' bg='#3F4E4F' fontSize='lg' fontWeight='bold' borderColor='#3F4E4F' children='$' />
-                            <Input type='number' onChange={updateInput} border='2px' borderColor='#3F4E4F' bg='#1f2124' color='#FFFFFF' _hover={{ color: '#FFFFFF', bg: '#1f2124' }} />
+                            <Input type='number' onChange={updateInput} border='2px' borderColor='#3F4E4F' color='#FFFFFF' _hover={{ color: '#FFFFFF' }} />
                         </InputGroup>
                         {!isError ? (
                             <FormHelperText>
@@ -71,7 +71,7 @@ export default function Body() {
                         ) : (
                             <FormErrorMessage>Input Can't Be Empty.</FormErrorMessage>
                         )}
-                        <Button my='7px' type="submit" color='#FFFFFF' bg='#3F4E4F' _hover={{ color: '#0A0908', bg: '#00ADB5' }}> Hitung </Button>
+                        <Button my='7px' type="submit" bgGradient='linear(to-l, #5F0F40, #310E68)' bg='#3F4E4F' _hover={{ color: '#FFFFFF', bg: '#524A4E' }}> Hitung </Button>
                     </FormControl>
                 </Box>
             </Box>

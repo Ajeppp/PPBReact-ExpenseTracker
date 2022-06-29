@@ -21,7 +21,7 @@ export default function Total(props) {
                             <PopoverCloseButton />
                             <PopoverBody bg='#374045'>
                                 {props.data.Expense.map((history) =>
-                                    <Heading size='sm' mx='15px' textAlign='left'>${history}</Heading>
+                                    <Heading size='sm' mx='15px' color='#F15412' textAlign='left'>${history}</Heading>
                                 )}
                             </PopoverBody>
                         </PopoverContent>
