@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PPBReact-ExpenseTracker/static/css/main.5496ab0b.css",
+    "main.js": "/PPBReact-ExpenseTracker/static/js/main.87ef8207.js",
+    "index.html": "/PPBReact-ExpenseTracker/index.html",
+    "main.5496ab0b.css.map": "/PPBReact-ExpenseTracker/static/css/main.5496ab0b.css.map",
+    "main.87ef8207.js.map": "/PPBReact-ExpenseTracker/static/js/main.87ef8207.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5496ab0b.css",
+    "static/js/main.87ef8207.js"
+  ]
+}
