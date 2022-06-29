@@ -30,10 +30,10 @@ export default function Total(props) {
             </Flex>
             <Flex className="BungkusTotalExpense" border='4px' borderColor='#3F4E4F' width='200px' height='80px' gap='20px'>
                 <Box display='flex' flexDir="column" justifyContent='center' mx='20px'>
-                    <Text textAlign='left' fontSize='large' >Income</Text>
+                    <Text textAlign='left' fontSize='large' >Income </Text>
                     <Text textAlign='left' color='#3EC70B' fontWeight='bold' fontSize='large'>${props.total.Income}</Text>
                 </Box>
-                <Box display='flex' flexDir="column" justifyContent='center'>
+                <Box display='flex' flexDir="column" mx='4px' justifyContent='center'>
                     <Popover isLazy>
                         <PopoverTrigger>
                             <Button bg='#3F4E4F' fontSize='xl' _hover={{ bg: '#3F4E4F' }}><MdHistory /></Button>
