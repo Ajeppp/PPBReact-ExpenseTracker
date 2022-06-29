@@ -1,6 +1,5 @@
 import { React, useState } from "react";
 import { Box, Button, InputLeftAddon, InputGroup, FormControl, Text, FormHelperText, FormErrorMessage, Heading, Flex, Input } from "@chakra-ui/react";
-import History from "./history";
 import Total from "./total";
 
 export default function Body() {
