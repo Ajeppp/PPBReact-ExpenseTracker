@@ -1,6 +1,7 @@
 import { React, useState } from "react";
-import { Box, Button, InputLeftAddon, InputGroup, FormControl, NumberInput, NumberInputField, FormHelperText, FormErrorMessage, Heading, Flex, Input } from "@chakra-ui/react";
+import { Box, Button, InputLeftAddon, InputGroup, FormControl, Text, FormHelperText, FormErrorMessage, Heading, Flex, Input } from "@chakra-ui/react";
 import History from "./history";
+import Total from "./total";
 
 export default function Body() {
     const [saldo, setSaldo] = useState(0);
@@ -8,6 +9,10 @@ export default function Body() {
     const [data, setData] = useState({
         Expense: [],
         Income: [],
+    });
+    const [total, setTotal] = useState({
+        Expense: 0,
+        Income: 0,
     });
 
     const isError = input === '' || input === (0);
@@ -23,35 +28,41 @@ export default function Body() {
                 Expense: [...data.Expense],
                 Income: [...data.Income, parseInt(input)],
             });
+            setTotal({
+                Expense: total.Expense,
+                Income: total.Income + parseInt(input),
+            });
         } else {
             setData({
                 Expense: [...data.Expense, parseInt(Math.abs(input))],
                 Income: [...data.Income],
             });
+            setTotal({
+                Expense: total.Expense + parseInt(Math.abs(input)),
+                Income: total.Income,
+            });
         }
         setSaldo((prevVal) => prevVal + parseInt(input));
-        console.log("masuk");
     }
 
     function check(e) {
         e.preventDefault();
         if (!parseInt(input)) {
-            console.log("kosong");
         } else {
             handleSubmit();
         }
     }
 
     return (
-        <Flex className="Bungkus" gap='20px' flexDir='column' justifyContent='center' alignItems='center'>
+        <Flex className="Bungkus" flexDir='column' justifyContent='center' alignItems='center'>
             <Box className="Body">
-                <Box className='Saldo'>
-                    <Heading fontSize='lg' my='10px'>Your Balance: Rp{saldo}</Heading>
+                <Box className='Saldo' color='#FFFFFF'>
+                    <Heading fontWeight='normal' fontSize='lg'>My Balance: <Flex color='#FFFFFF' fontWeight='bold' display='inline-flex'>${saldo}</Flex> </Heading>
                 </Box>
                 <Box className='InputUser' as='form' width='200px' onSubmit={check}>
                     <FormControl isInvalid={isError} my='10px'>
                         <InputGroup>
-                            <InputLeftAddon color='#FFFFFF' bg='#3F4E4F' borderColor='#3F4E4F' children='Rp' />
+                            <InputLeftAddon color='#FFFFFF' bg='#3F4E4F' fontSize='lg' fontWeight='bold' borderColor='#3F4E4F' children='$' />
                             <Input type='number' onChange={updateInput} border='2px' borderColor='#3F4E4F' bg='#1f2124' color='#FFFFFF' _hover={{ color: '#FFFFFF', bg: '#1f2124' }} />
                         </InputGroup>
                         {!isError ? (
@@ -64,7 +75,7 @@ export default function Body() {
                     </FormControl>
                 </Box>
             </Box>
-            <History data={data} />
+            <Total total={total} data={data} />
         </Flex>
     )
 }
