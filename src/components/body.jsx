@@ -25,7 +25,7 @@ export default function Body() {
             });
         } else {
             setData({
-                Expense: [...data.Expense, parseInt(input)],
+                Expense: [...data.Expense, parseInt(Math.abs(input))],
                 Income: [...data.Income],
             });
         }
