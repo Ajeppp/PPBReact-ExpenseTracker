@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/PPBReact-ExpenseTracker/static/css/main.5496ab0b.css",
-    "main.js": "/PPBReact-ExpenseTracker/static/js/main.0d4ef82c.js",
+    "main.js": "/PPBReact-ExpenseTracker/static/js/main.4c0d19dc.js",
     "index.html": "/PPBReact-ExpenseTracker/index.html",
     "main.5496ab0b.css.map": "/PPBReact-ExpenseTracker/static/css/main.5496ab0b.css.map",
-    "main.0d4ef82c.js.map": "/PPBReact-ExpenseTracker/static/js/main.0d4ef82c.js.map"
+    "main.4c0d19dc.js.map": "/PPBReact-ExpenseTracker/static/js/main.4c0d19dc.js.map"
   },
   "entrypoints": [
     "static/css/main.5496ab0b.css",
-    "static/js/main.0d4ef82c.js"
+    "static/js/main.4c0d19dc.js"
   ]
 }
