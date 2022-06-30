@@ -49,6 +49,8 @@ export default function Body() {
         if (!parseInt(input)) {
         } else {
             handleSubmit();
+            e.target.reset();
+            setInput(0);
         }
     }
 
