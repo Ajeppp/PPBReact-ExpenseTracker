@@ -11,6 +11,5 @@ export default function Header() {
         >
             TracPense
         </Text>
-        // <Heading fontSize='4xl' my='10px' bgGradient='linear(to-l, #7928CA, #FF0080)'>TrackPense</Heading>
     )
 }

@@ -5,15 +5,15 @@ import { MdHistory } from "react-icons/md";
 export default function Total(props) {
     return (
         <Flex className="BungkusTotal" gap='20px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}>
-            <Flex className="BungkusTotalExpense" border='4px' borderColor='#3F4E4F' width='200px' height='80px' gap='20px'>
-                <Box display='flex' flexDir="column" justifyContent='center' mx='20px'>
+            <Flex className="BungkusTotalExpense" border='4px' borderRadius='13px' borderColor='#3F4E4F' width='auto' height='80px' gap='20px'>
+                <Box display='flex' flexDir="column" width='110px' justifyContent='center' marginLeft='20px'>
                     <Text textAlign='left' fontSize='large'>Expense</Text>
                     <Text textAlign='left' color='#F15412' fontWeight='bold' fontSize='large'>${props.total.Expense}</Text>
                 </Box>
-                <Box display='flex' flexDir="column" justifyContent='center'>
+                <Box display='flex' flexDir="column" justifyContent='center' alignItems='flex-end'>
                     <Popover isLazy>
                         <PopoverTrigger>
-                            <Button bg='#3F4E4F' fontSize='xl' _hover={{ bg: '#3F4E4F' }}><MdHistory /></Button>
+                            <Button marginRight='15px' bg='#3F4E4F' fontSize='xl' _hover={{ bg: '#3F4E4F' }}><MdHistory /></Button>
                         </PopoverTrigger>
                         <PopoverContent bg='#374045' textAlign='left'>
                             <PopoverHeader fontWeight='semibold' color='#FFFFFF' mx='15px'>Expense</PopoverHeader>
@@ -28,15 +28,15 @@ export default function Total(props) {
                     </Popover>
                 </Box>
             </Flex>
-            <Flex className="BungkusTotalExpense" border='4px' borderColor='#3F4E4F' width='200px' height='80px' gap='20px'>
-                <Box display='flex' flexDir="column" justifyContent='center' mx='20px'>
+            <Flex className="BungkusTotalExpense" border='4px' borderRadius='13px' borderColor='#3F4E4F' width='auto' height='80px' gap='20px'>
+                <Box display='flex' flexDir="column" width='110px' justifyContent='center' marginLeft='20px'>
                     <Text textAlign='left' fontSize='large' >Income </Text>
                     <Text textAlign='left' color='#3EC70B' fontWeight='bold' fontSize='large'>${props.total.Income}</Text>
                 </Box>
-                <Box display='flex' flexDir="column" mx='4px' justifyContent='center'>
+                <Box display='flex' flexDir="column" justifyContent='center' alignItems='flex-end'>
                     <Popover isLazy>
                         <PopoverTrigger>
-                            <Button bg='#3F4E4F' fontSize='xl' _hover={{ bg: '#3F4E4F' }}><MdHistory /></Button>
+                            <Button marginRight='15px' bg='#3F4E4F' fontSize='xl' _hover={{ bg: '#3F4E4F' }}><MdHistory /></Button>
                         </PopoverTrigger>
                         <PopoverContent bg='#374045' textAlign='left'>
                             <PopoverHeader fontWeight='semibold' color='#FFFFFF' mx='15px'>Income</PopoverHeader>
