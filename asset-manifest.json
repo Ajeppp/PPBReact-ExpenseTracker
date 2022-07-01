@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/PPBReact-ExpenseTracker/static/css/main.31d6cfe0.css",
-    "main.js": "/PPBReact-ExpenseTracker/static/js/main.3eb55135.js",
+    "main.js": "/PPBReact-ExpenseTracker/static/js/main.52c9577b.js",
     "index.html": "/PPBReact-ExpenseTracker/index.html",
-    "main.3eb55135.js.map": "/PPBReact-ExpenseTracker/static/js/main.3eb55135.js.map"
+    "main.52c9577b.js.map": "/PPBReact-ExpenseTracker/static/js/main.52c9577b.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.3eb55135.js"
+    "static/js/main.52c9577b.js"
   ]
 }
