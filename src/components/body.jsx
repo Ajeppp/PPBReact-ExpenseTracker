@@ -1,10 +1,23 @@
 import { React, useState } from "react";
-import { Box, Button, InputLeftAddon, InputGroup, FormControl, Text, FormHelperText, FormErrorMessage, Heading, Flex, Input, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  InputLeftAddon,
+  InputGroup,
+  FormControl,
+  Text,
+  FormHelperText,
+  FormErrorMessage,
+  Heading,
+  Flex,
+  Input,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Total from "./total";
 
 export default function Body() {
-  const bg = useColorModeValue('black', 'whiteAlpha.800')
-  const color = useColorModeValue('whiteAlpha.800', 'black')
+  const bg = useColorModeValue("black", "whiteAlpha.800");
+  const color = useColorModeValue("whiteAlpha.800", "black");
   const [saldo, setSaldo] = useState(0);
   const [input, setInput] = useState(0);
   const [data, setData] = useState({
@@ -16,7 +29,7 @@ export default function Body() {
     Income: 0,
   });
 
-  const isError = input === '' || input === (0);
+  const isError = input === "" || input === 0;
 
   function updateInput(e) {
     const inputTemp = e.target.value;
@@ -57,28 +70,63 @@ export default function Body() {
   }
 
   return (
-    <Flex className="Bungkus" height={{ base: '400px', md: '350px', lg: '300px' }} width={{ base: '300px', md: '450px', lg: '500px' }} flexDir='column' justifyContent='center' alignItems='center'>
+    <Flex
+      className="Bungkus"
+      height={{ base: "400px", md: "350px", lg: "300px" }}
+      width={{ base: "300px", md: "450px", lg: "500px" }}
+      flexDir="column"
+      justifyContent="center"
+      alignItems="center"
+    >
       <Box className="Body">
-        <Box className='Saldo' color={color}>
-          <Heading fontWeight='normal' fontSize={{ base: 'lg', lg: 'xl' }}>My Balance: <Flex color={color} fontWeight='bold' display='inline-flex'>${saldo}</Flex> </Heading>
+        <Box className="Saldo" color={color}>
+          <Heading fontWeight="normal" fontSize={{ base: "lg", lg: "xl" }}>
+            My Balance:{" "}
+            <Flex color={color} fontWeight="bold" display="inline-flex">
+              ${saldo}
+            </Flex>{" "}
+          </Heading>
         </Box>
-        <Box className='InputUser' as='form' width='200px' onSubmit={check}>
-          <FormControl isInvalid={isError} my='10px'>
+        <Box className="InputUser" as="form" width="200px" onSubmit={check}>
+          <FormControl isInvalid={isError} my="10px">
             <InputGroup>
-              <InputLeftAddon color={bg} bg={color} fontSize='lg' fontWeight='bold' borderColor={color} children='$' />
-              <Input type='number' onChange={updateInput} border='2px' fontWeight='bold' borderColor={color} color={color} _hover={{ color: { color } }} />
+              <InputLeftAddon
+                color={bg}
+                bg={color}
+                fontSize="lg"
+                fontWeight="bold"
+                borderColor={color}
+                children="$"
+              />
+              <Input
+                type="number"
+                onChange={updateInput}
+                border="2px"
+                fontWeight="bold"
+                borderColor={color}
+                color={color}
+                _hover={{ color: { color } }}
+              />
             </InputGroup>
             {!isError ? (
-              <FormHelperText>
-              </FormHelperText>
+              <FormHelperText></FormHelperText>
             ) : (
               <FormErrorMessage>Input Can't Be Empty.</FormErrorMessage>
             )}
-            <Button my='7px' type="submit" bgGradient='linear(to-l, #5F0F40, #310E68)' bg='#3F4E4F' _hover={{ color: { color }, filter: 'auto', brightness: '150%' }}> Add </Button>
+            <Button
+              my="7px"
+              type="submit"
+              bgGradient="linear(to-l, #5F0F40, #310E68)"
+              bg="#3F4E4F"
+              _hover={{ color: { color }, filter: "auto", brightness: "150%" }}
+            >
+              {" "}
+              Add{" "}
+            </Button>
           </FormControl>
         </Box>
       </Box>
       <Total total={total} data={data} />
-    </Flex >
-  )
+    </Flex>
+  );
 }
